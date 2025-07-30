@@ -5,10 +5,23 @@
     <title>Focal</title>
     <link rel="stylesheet" href="app/style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.2.2/sticky.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
+    />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.2.2/sticky.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0b0300a197.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
     />
     <link
       rel="stylesheet"
@@ -309,6 +322,108 @@
       </div>
     </section>
 
-   <script src="app/javascript/app.js"></script>
+   
+<section id="portfolio">
+  <div class="container">
+    <h2 data-aos="fade-up">Portfolio</h2>
+    <p data-aos="fade">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus iusto maxime rerum, ipsum tenetur quasi autem culpa, quod, aliquam inventore impedit labore veritatis fugit ratione eligendi molestiae earum? Eaque, accusamus?</p>
+    <div class="grid" data-aos-delay="200" data-aos="fade">
+      <div class="filter">
+        <h4>Filter by Category</h4>
+        <ul>
+          <li class="active"><span>All</span></li>
+            <li><span>Themes</span></li>
+              <li><span>Icons</span></li>
+              <li><span>Patterns</span></li>
+              <li><span>Mockups</span></li>
+              <li><span>UI Kits</span></li>
+        </ul>
+      </div>
+      <div class="grid-item">
+            <img src="images/img-1.jpg" alt="" />
+            <div class="hover">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+           <div class="grid-item">
+            <img src="images/img-2.jpg" alt="" />
+            <div class="hover">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+           <div class="grid-item">
+            <img src="images/img-3.jpg" alt="" />
+            <div class="hover">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+           <div class="grid-item">
+            <img src="images/img-4.jpg" alt="" />
+            <div class="hover">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+           <div class="grid-item">
+            <img src="images/img-5.jpg" alt="" />
+            <div class="hover">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact-me">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <div class="grid">
+      <div class="left" data-aos="fade" data-aos-delay="300">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam perferendis non pariatur libero laborum</p>
+        <div class="info">
+          <span class="label">Email</span>
+          <span class="info-data">focal@contact.com</span>
+        </div>
+         <div class="info">
+          <span class="label">Phone</span>
+          <span class="info-data">1-306-222-2323</span>
+        </div>
+      </div>
+      <form data-aos="fade-left">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+    <footer>
+      <div class="container">
+        <p data-aos="fade" data-aos-delay="200">
+          COPYRIGHT &copy; 2025 FOCAL - By Yahya Taouarda
+        </p>
+        <div class="icons">
+          <i class="fa-brands fa-square-x-twitter"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-google-plus-g"></i>
+          <i class="fab fa-dribbble"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+        </div>
+        </footer>
+    
+<script src="index.js"></script>
   </body>
 </html>

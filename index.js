@@ -11,6 +11,7 @@ function closeNavBar() {
     navLinks.classList.remove("exit");
   }, 350);
 }
+
 const navLinks = document.querySelectorAll(".nav-links a");
 
 document.querySelector(".fa-xmark").onclick = closeNavBar;
@@ -27,7 +28,7 @@ links.forEach((link) => {
     const section = document.querySelector(link.getAttribute("href"));
     window.scrollTo({
       behavior: "smooth",
-      top: section.offsetTop - 75,
+      top: section.offsetTop - 50,
       left: 0,
     });
   };
@@ -48,4 +49,45 @@ bars.forEach((bar) => {
   progress.style.width = `${value}%`;
   const $value = progress.querySelector(".value");
   $value.textContent = `${value}%`;
+});
+
+const carouselButtons = document.querySelectorAll(
+  '[class^="carousel-button-"]'
+);
+const carouselItems = document.querySelectorAll(".carousel-item");
+
+carouselButtons.forEach((btn, i) => {
+  btn.onclick = () => {
+    carouselButtons.forEach((btn) => btn.classList.remove("active"));
+    carouselItems.forEach((item) => item.classList.remove("active"));
+    btn.classList.add("active");
+    carouselItems[i].classList.add("active");
+  };
+});
+
+const observer = new IntersectionObserver(
+  (observations) => {
+    const intersectedElement = observations.find((el) => el.isIntersecting);
+    if (intersectedElement) {
+      const { target } = intersectedElement;
+      const navLink = Array.from(navLinks).find(
+        (link) => link.getAttribute("href").replace("#", "") === target.id
+      );
+      if (navLink) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        navLink.classList.add("active");
+      }
+    }
+  },
+  {
+    threshold: 1.1,
+  }
+);
+
+const sections = Array.from(navLinks).map((link) =>
+  document.querySelector(link.getAttribute("href"))
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
 });
