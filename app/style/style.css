@@ -181,13 +181,16 @@ nav .logo-text {
   overflow: hidden;
   border-radius: 4px;
 }
+.barjs {
+  left: 10%;
+}
 #skills .progress {
   background-color: #c1432a;
   height: 100%;
   position: relative;
 }
 #skills .value {
-  right: 850px;
+  right: 590px;
   position: absolute;
   top: 50%;
   color: white;
