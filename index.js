@@ -14,7 +14,7 @@ function closeNavBar() {
 
 const navLinks = document.querySelectorAll(".nav-links a");
 
-document.querySelector(".fa-xmark").onclick = closeNavBar;
+document.querySelector(".fa-close").onclick = closeNavBar;
 
 const links = Array.from(document.querySelectorAll("a")).filter(
   (a) => a.getAttribute("href")[0] === "#"

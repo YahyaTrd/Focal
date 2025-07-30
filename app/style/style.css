@@ -561,17 +561,99 @@ hr {
   color: white;
   font-size: 22px;
   display: none;
-  transform: none;
   cursor: pointer;
+  transform: none;
 }
-.fa-solid {
+
+.fa-close {
+  position: fixed;
   z-index: 2001;
   right: 50px;
-  position: fixed;
   transform: none;
   top: 50px;
-  color: white;
   font-size: 35px;
-  display: none;
+  color: white;
   cursor: pointer;
+  display: none;
+}
+
+@media all and (max-width: 1000px) {
+  .nav-links {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(9px);
+    background-color: #4a535560;
+    flex-direction: column;
+    padding: 150px 0;
+    z-index: 2000;
+    opacity: 0;
+    display: none;
+    min-width: 0;
+    justify-content: space-around;
+  }
+  .nav-links .nav-link {
+    text-align: center;
+  }
+  .nav-links .nav-link a {
+    font-size: 23px;
+  }
+  .fa-bars,
+  .fa-close {
+    display: inline-block;
+  }
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    animation: fadeIn 0.6s ease-in-out both;
+  }
+  .nav-links.active .nav-link {
+    animation: 0.3s fadeInDown ease-out both;
+  }
+  .nav-links.active .nav-link:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .nav-links.active .nav-link:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .nav-links.active .nav-link:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .nav-links.active .nav-link:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .nav-links.active .nav-link:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .nav-links.active .nav-link:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  .nav-links.active .nav-link:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  .nav-links.exit {
+    display: flex;
+    opacity: 1;
+    animation: fadeOut 0.36s ease-in-out both;
+  }
+  #home {
+    background-image: url(/images/logo.jpg);
+  }
+}
+
+@media all and (max-width: 660px) {
+  .container {
+    padding: 0 25px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  h1 {
+    font-size: 36px;
+  }
 }
