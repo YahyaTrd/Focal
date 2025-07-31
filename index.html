@@ -30,7 +30,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+<link rel="icon" href="images/logo.jpg">
   </head>
   <body>
     <section id="home">
@@ -395,17 +395,21 @@
 
         <div class="field">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" required onkeyup="validateName()" />
+        <span class="error" id="name-error"></span>
         </div>
         <div class="field">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required onkeyup="validateEmail()"/>
+          <span class="error" id="email-error"></span>
         </div>
         <div class="field">
           <label for="message">Message</label>
           <textarea name="message" id="message" required></textarea>
+          <span class="error" id="message-error"></span>
         </div>
         <button type="submit" class="btn btn-dark">Submit</button>
+        <span id="submit-error"></span>
       </form>
     </div>
   </div>
@@ -428,5 +432,6 @@
         </footer>
     
 <script src="index.js"></script>
+<script src="input.js"></script>
   </body>
 </html>
